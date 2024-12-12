@@ -8,6 +8,7 @@ import Main from './Main.js';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Topbar from './Topbar.js';
 import Post1 from './Post1.js';
+import Fb from './Fb.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -21,6 +22,7 @@ root.render(
               <Routes> {/* Nested Routes should be avoided, but if needed, ensure it is inside the Router context */}
                 <Route path="/" element={<Main />} />
                 <Route path="/post1" element={<Post1 />} />
+                <Route path="/fb" element={<Fb />} />
                 
               </Routes>
               <Topbar />

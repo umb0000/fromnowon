@@ -13,34 +13,34 @@ const Topbar = () => {
       <div className="w-screen flex flex-col items-center justify-center bg-white/80">
         <div className=" w-screen h-[50px] flex items-center justify-center px-4 border-y border-black">
           <img 
-            className="w-[30px] h-[25px]" 
-            src="자산 3I83_219;83_207.png" 
+            className="w-[30px] pr-[10px]" 
+            src={process.env.PUBLIC_URL + "/logo_fn1.png"} 
             alt="Logo" 
           />
           <div className="flex flex-row items-center justify-start gap-4">
-            <div className="text-lg font-['Pretendard'] font-bold text-black text-center">
+          <a href="/"> <div className="text-lg font-['Pretendard'] font-bold text-black text-center">
               FROM NOW ON
-            </div>
+            </div></a>
             <img 
               className="w-[5px] h-[5px]" 
               src="Ellipse 3I83_219;83_210.png" 
               alt="Dot" 
             />
-            <div className="text-lg font-['Pretendard'] font-bold text-black text-center">
+           <a href="/fb"><div className="text-lg font-['Pretendard'] font-bold text-black text-center">
               F&B
-            </div>
+            </div></a> 
             <div className="w-[5px] h-[5px] bg-black rounded-full"></div>
-            <div className="text-lg font-['Pretendard'] font-bold text-black text-center">
+            <a href="/culture"><div className="text-lg font-['Pretendard'] font-bold text-black text-center">
               CULTURE
-            </div>
+            </div></a>
             <div className="w-[5px] h-[5px] bg-black rounded-full"></div>
             <div className="text-lg font-['Pretendard'] font-bold text-black text-center">
               PEOPLE
             </div>
             <div className="w-[5px] h-[5px] bg-black rounded-full"></div>
-            <div className="text-lg font-['Pretendard'] font-bold text-black text-center">
+            <a href="/about"><div className="text-lg font-['Pretendard'] font-bold text-black text-center">
               ABOUT US
-            </div>
+            </div></a>
           </div>
         </div>
       </div>
