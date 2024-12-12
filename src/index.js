@@ -7,6 +7,7 @@ import reportWebVitals from './reportWebVitals';
 import Main from './Main.js';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Topbar from './Topbar.js';
+import Post1 from './Post1.js';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -19,6 +20,8 @@ root.render(
             <div className="main-content pb-[80px]">
               <Routes> {/* Nested Routes should be avoided, but if needed, ensure it is inside the Router context */}
                 <Route path="/" element={<Main />} />
+                <Route path="/post1" element={<Post1 />} />
+                
               </Routes>
               <Topbar />
             </div>

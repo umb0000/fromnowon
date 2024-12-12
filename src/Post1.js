@@ -3,14 +3,14 @@ import './output.css';
 
 const Post1 = () => {
 	return (
-  <div className="relative w-[1440px] h-[2233px] bg-[#fff] overflow-hidden">
+  <div className="relative w-screen h-[4000px] bg-[#fff] overflow-hidden">
   <div className="absolute left-[151px] top-0 w-[1139px] flex flex-col items-center justify-start gap-[46px]">
-    <img width="1139" height="641" src="마스트리스보트 페이지 1119_62.png"></img>
+    <img width="1139" height="641" src={process.env.PUBLIC_URL + "/post1_1.png"}></img>
     <div className="w-[716px] flex flex-col items-start justify-start gap-[43px]">
       <div className="self-stretch text-[15px] font-['Pretendard'] text-[#000]">2024-10-04</div>
       <div className="self-stretch text-[40px] font-['Pretendard'] font-bold text-[#000]">암온어 마스트리스 BOAT</div>
       <div className="self-stretch text-[20px] font-['Pretendard'] font-light text-[#000]">눈에 보이는 사방이 귀여운 고양이</div>
-      <img width="716" height="435" src="image16_30.png"></img>
+      <img width="716" height="435" src={process.env.PUBLIC_URL + "/post1_2.png"}></img>
       <div className="w-[699px] text-[20px] font-['Pretendard'] font-medium text-[#000]">‘돛대를 잃은 배’라는 뜻을 가진 이 카페는 한 건물의 2층에 숨겨져 있다.<br/>원목가구들과 초록 식물들로 가득 채워져있어, 누군가의 작은 공간을 엿보는 듯한 아늑한 느낌을 준다.</div>
       <div className="text-[20px] font-['Pretendard'] font-medium text-[#000] whitespace-nowrap">특히 이 곳의 특별한 점은, 마스코트 태릉이가 반겨준다는 것!<br/>모른척 할 일을 하다보면 슬쩍 팬서비스를 해주고 가니 먼저 다가오기를 기다려보자.<br/> </div>
       <div className="text-[20px] font-['Pretendard'] font-medium text-[#000] whitespace-nowrap">특히 이 곳의 특별한 점은, 마스코트 태릉이가 반겨준다는 것!<br/>모른척 할 일을 하다보면 슬쩍 팬서비스를 해주고 가니 먼저 다가오기를 기다려보자.<br/> </div>

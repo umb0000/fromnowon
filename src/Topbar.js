@@ -3,6 +3,7 @@ import './output.css';
 
 const Topbar = () => {
   return (
+    <div>
     <div className="fixed top-0 w-full flex flex-col items-center justify-start backdrop-blur-lg z-50">
       <div className="w-full h-[38px] flex items-center justify-center bg-white">
         <div className="flex-1 text-lg font-['Pretendard'] font-medium text-black text-center">
@@ -44,6 +45,13 @@ const Topbar = () => {
         </div>
       </div>
     </div>
+
+<div className="w-screen h-[50px] fixed bottom-[0px] flex flex-row items-center justify-between py-[13px] px-[30px] bg-[#000]">
+<a href="/"> <div className="text-[20px] font-['Pretendard'] font-black text-[#fff] text-center whitespace-nowrap">FROM NOW ON</div></a>
+  <a href="https://www.instagram.com/fromnowon.mag"><div className="text-[20px] font-['Pretendard'] font-black text-[#fff] text-center whitespace-nowrap pr-[10px]">INSTAGRAM</div></a>
+</div>
+
+</div>
   );
 };
 
