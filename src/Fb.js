@@ -23,6 +23,8 @@ const Fb = () => {
             <div className="text-[15px] font-['Inter'] text-[#000] whitespace-nowrap">BTS RM도 다녀간 공릉 로스터리</div>
           </div>
         </div>
+
+        <a href='/post1'>
         <div className="w-[350px] shrink-0 flex flex-col items-start justify-start gap-[11px]">
           <img width="350" src={process.env.PUBLIC_URL + "/main_post6.png"}></img>
           <div className="flex flex-col items-start justify-start gap-[3px]">
@@ -30,7 +32,8 @@ const Fb = () => {
             <div className="text-[28px] font-['Pretendard'] font-bold text-[#000] whitespace-nowrap">암온어 마스트리스boat</div>
             <div className="text-[15px] font-['Inter'] text-[#000] whitespace-nowrap">눈에 보이는 사방이 고양이</div>
           </div>
-        </div>
+        </div></a>
+
         <div className="w-[350px] shrink-0 flex flex-col items-start justify-start gap-[11px]">
           <img width="350" src={process.env.PUBLIC_URL + "/main_post7.png"}></img>
           <div className="flex flex-col items-start justify-start gap-[3px]">

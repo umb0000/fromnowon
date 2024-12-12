@@ -4,7 +4,7 @@ import './output.css';
 const Post1 = () => {
 	return (
   <div className="relative w-screen h-[4000px] bg-[#fff] overflow-hidden">
-  <div className="absolute left-[151px] top-0 w-[1139px] flex flex-col items-center justify-start gap-[46px]">
+  <div className="absolute  top-0 w-screen flex flex-col items-center justify-start gap-[46px]">
     <img width="1139" height="641" src={process.env.PUBLIC_URL + "/post1_1.png"}></img>
     <div className="w-[716px] flex flex-col items-start justify-start gap-[43px]">
       <div className="self-stretch text-[15px] font-['Pretendard'] text-[#000]">2024-10-04</div>

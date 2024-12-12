@@ -8,13 +8,13 @@ const Main = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentTextIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 2000); // 2초 애니메이션 + 2초 대기
+    }, 1800); // 2초 애니메이션 + 2초 대기
     return () => clearInterval(interval);
   }, []);
 
 	return (
-  <div className="w-screen h-[3774px] bg-[#fff] overflow-hidden">
-  <div className="absolute top-[157px] w-screen flex flex-col items-center justify-start gap-[10px]">
+  <div className="w-screen h-[3700px] bg-[#fff] overflow-hidden">
+  <div className="absolute top-[157px] w-screen flex flex-col items-center justify-start gap-[0px]">
     <div className="relative w-screen h-[769px] shrink-0 flex">
       <div className="absolute left-1/2 top-0 items-center w-[460px] h-[682px] flex">
         
@@ -54,16 +54,17 @@ const Main = () => {
     </div>
 
     <div className="w-screen flex flex-row items-start justify-between">
+      <a href='/post2'>
         <div className="relative w-[50vw] h-auto shrink-0 flex pl-[0px] pr-[2vw] py-[0px] bg-white flex-col justify-between items-start">
           <div className="relative w-full h-auto flex">
             <img className="w-full h-auto" src={process.env.PUBLIC_URL + "/main_post1.png"} alt="main post" />
             <div className="w-full h-auto bg-gradient-to-b from-transparent via-black/60 to-black"></div>
           </div>
-        </div>
+        </div></a>
+
         <div className="relative w-[50%] h-auto shrink-0 flex">
           <div className="absolute w-full h-full bg-white"></div>
           <div className="absolute left-[200px] top-[169px] w-[411px] h-[580px]">
-
      <svg
         width="293"
         height="426"
@@ -133,29 +134,33 @@ const Main = () => {
         </div>
       </div>
 
-      <div className="w-screen flex flex-row items-start justify-between">
-  <div className="relative w-[50vw] h-auto shrink-0 flex pl-[30px] pr-[2vw] py-[0px] bg-white flex-col justify-between items-start ">
-    <div className="h-[90px] flex flex-col justify-start items-start gap-0.5">
+      <div className="w-screen flex flex-row items-start ">
+  <div className="relative w-[50vw] h-auto shrink-0 flex pl-[30px]  pt-[25px] bg-white flex-col justify-between items-start ">
+    <div className="h-[70px] flex flex-col justify-start items-start gap-0.5">
       <div className="self-stretch flex justify-start items-center gap-[10px]">
         <div className="text-black text-[35px] font-bold font-['Pretendard']">이 달의 MAGAZINE</div>
       </div>
-      <div className="relative self-stretch h-8 text-black text-xl font-normal font-['Inter']"></div>
     </div>
 
+
+    <a href='/post3'>
     <div className="relative self-stretch flex flex-wrap justify-start items-start gap-5">
       <div className="w-[18vw] h-[430px] relative">
-        <div className="w-full h-full left-0 top-0 absolute "></div>
+        <div className="left-0 top-0 absolute "></div>
         <img className="w-full h-auto absolute top-0 left-0 object-cover" src={process.env.PUBLIC_URL + "/main_post3.png"} alt="post 3" />
       </div>
-      <div className="w-[176.83px] flex flex-col justify-start items-start gap-[3px]">
+      <div className="w-[400px] flex flex-col justify-start items-start gap-[3px]">
         <div className="text-black text-base font-bold font-['Pretendard']">PEOPLE & PLACE</div>
-        <div className="text-black text-[28px] font-bold font-['Pretendard']">하이레제목</div>
-        <div className="text-black text-[15px] font-normal font-['Inter']">공릉 메모아</div>
+        <div className="text-black text-[28px] font-bold font-['Pretendard']">"로고, 딸이 그렸다, <br/>돈카츠 이유도 딸이 좋아해서..."</div>
+        <div className="text-black text-[15px] font-normal font-['Inter']">광운대 선정 1위 맛집 ㅡ 하이레 인터뷰</div>
       </div>
-    </div>
+    </div></a>
 
-    <div className="relative w-full flex justify-end items-start gap-5">
+    <a href='/post4' className='left-150'>
+    <div className="w-[45vw] relative w-full flex justify-end items-start gap-5 pt-[40px]">
+    
       <div className="relative flex flex-col justify-start items-end gap-[3px]">
+      
         <div className="text-black text-base font-bold font-['Pretendard']">F&B PLACE</div>
         <div className="text-right text-black text-[28px] font-bold font-['Pretendard']">가을엔 뇨끼를</div>
         <div className="text-black text-[15px] font-normal font-['Inter']">공릉 메모아</div>
@@ -163,20 +168,25 @@ const Main = () => {
       <div className="w-[18vw] h-[346.67px] relative">
         <img className="w-full h-auto absolute top-0 left-0 object-cover" src={process.env.PUBLIC_URL + "/main_post4.png"} alt="post 4" />
       </div>
-    </div>
+    </div></a>
   </div>
 
+
   <div className="relative w-[50%] h-auto shrink-0 flex flex-col items-end justify-between">
+  <a href='/post5'>
     <div className="relative w-full h-auto flex">
       <img className="w-full h-auto object-cover" src={process.env.PUBLIC_URL + "/main_post2.png"} alt="main post" />
       <div className="absolute top-0 left-0 w-full h-full"></div>
     </div>
+    </a>
   </div>
+  
+
 </div>
 
 
-
-    <div className="w-[1379px] flex flex-col items-start justify-start gap-[27px]">
+<div className='w-screen h-[750px] flex flex-row items-center bg-[#C5FF31] pl-[30px]'>
+    <div className="w-[1379px] flex flex-col items-start justify-start gap-[27px]   ">
       <div className="w-[379px] flex flex-col items-start justify-start gap-[10px]">
         <div className="self-stretch flex flex-row items-center justify-start gap-[17px]">
           <div className="text-[40px] font-['Pretendard'] font-bold text-[#000] whitespace-nowrap">EDITOR’S TASTE</div>
@@ -184,7 +194,9 @@ const Main = () => {
         </div>
         <div className="self-stretch h-[32px] text-[20px] font-['Inter'] text-[#000]">에디터가 제안하는 공간들</div>
       </div>
+
       <div className="self-stretch flex flex-row items-center justify-start gap-[20px]">
+      <a href="/post4">
         <div className="w-[446px] shrink-0 flex flex-col items-start justify-start gap-[11px]">
           <img width="446" height="446" src={process.env.PUBLIC_URL + "/main_post5.png"}></img>
           <div className="flex flex-col items-start justify-start gap-[3px]">
@@ -192,7 +204,10 @@ const Main = () => {
             <div className="text-[28px] font-['Pretendard'] font-bold text-[#000] whitespace-nowrap">RM은 어떤 카페를 갈까</div>
             <div className="text-[15px] font-['Inter'] text-[#000] whitespace-nowrap">BTS RM도 다녀간 공릉 로스터리</div>
           </div>
-        </div>
+        </div></a>
+
+
+        <a href="/post1">
         <div className="w-[446px] shrink-0 flex flex-col items-start justify-start gap-[11px]">
           <img width="446" height="446" src={process.env.PUBLIC_URL + "/main_post6.png"}></img>
           <div className="flex flex-col items-start justify-start gap-[3px]">
@@ -200,7 +215,7 @@ const Main = () => {
             <div className="text-[28px] font-['Pretendard'] font-bold text-[#000] whitespace-nowrap">암온어 마스트리스boat</div>
             <div className="text-[15px] font-['Inter'] text-[#000] whitespace-nowrap">눈에 보이는 사방이 고양이</div>
           </div>
-        </div>
+        </div></a>
         <div className="w-[446px] shrink-0 flex flex-col items-start justify-start gap-[11px]">
           <img width="446" height="446" src={process.env.PUBLIC_URL + "/main_post7.png"}></img>
           <div className="flex flex-col items-start justify-start gap-[3px]">
@@ -210,7 +225,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-    </div>
+    </div></div>
   </div>
   
 </div>)
