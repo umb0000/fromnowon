@@ -18,7 +18,7 @@ const Topbar = () => {
           />
           <div className="flex flex-row items-center justify-start gap-4">
             <div className="text-lg font-['Pretendard'] font-bold text-black text-center">
-              NOWON
+              FROM NOW ON
             </div>
             <img 
               className="w-[5px] h-[5px]" 

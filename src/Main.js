@@ -12,7 +12,8 @@ const Main = () => {
     return () => clearInterval(interval);
   }, []);
 
-	return (<div className="w-screen h-[3774px] bg-[#fff] overflow-hidden">
+	return (
+  <div className="w-screen h-[3774px] bg-[#fff] overflow-hidden">
   <div className="absolute top-[157px] w-screen flex flex-col items-center justify-start gap-[36px]">
     <div className="relative w-screen h-[769px] shrink-0 flex">
       <div className="absolute left-1/2 top-0 items-center w-[460px] h-[682px] flex">
@@ -49,18 +50,10 @@ const Main = () => {
     </div>
 
     <div className="w-screen flex flex-row items-start justify-between">
-        <div className="relative w-[60%] h-auto shrink-0 flex flex-col items-end justify-between p-4">
+        <div className="relative w-[50%] h-auto shrink-0 flex flex-col items-end justify-between">
           <div className="relative w-full h-auto flex">
             <img className="w-full h-auto" src={process.env.PUBLIC_URL + "/main_post1.png"} alt="main post" />
             <div className="w-full h-auto bg-gradient-to-b from-transparent via-black/60 to-black"></div>
-          </div>
-          <div className="flex flex-row items-center justify-start gap-4">
-            <div className="text-2xl font-['Pretendard'] font-bold text-white whitespace-nowrap">F&B PLACE</div>
-            <img width="31" height="28" src="Vector64_29.png" alt="icon" />
-          </div>
-          <div className="w-full flex flex-col items-start justify-start gap-2">
-            <div className="w-full text-4xl font-['Pretendard'] font-extrabold text-white">이탈리아 현지 생면의 맛을 찾아서</div>
-            <div className="w-full text-xl font-['Inter'] text-white">공릉 페페그라노</div>
           </div>
         </div>
         <div className="relative w-[40%] h-auto shrink-0 flex">
@@ -84,59 +77,60 @@ const Main = () => {
         </div>
       </div>
 
-
-    <div className="self-stretch flex flex-row items-center justify-start gap-[1px]">
-      <div className="w-[600px] h-[980px] shrink-0 flex flex-col items-start justify-between pt-[31px] pr-[20px] pb-0 pl-[31px] bg-[#fff]">
-        <div className="w-[379px] flex flex-col items-start justify-start gap-[10px]">
-          <div className="self-stretch flex flex-row items-center justify-start gap-[17px]">
-            <div className="text-[40px] font-['Pretendard'] font-bold text-[#000] whitespace-nowrap">이 달의 MAGAZINE</div>
-            <img width="31" height="28" src="Vector64_40.png"></img>
-          </div>
-          <div className="self-stretch h-[32px] text-[20px] font-['Inter'] text-[#000]">2024년 11월</div>
-        </div>
-        <div className="flex flex-row items-start justify-start gap-[11px]">
-          <img width="300" height="400" src="Mask group37_57.png"></img>
-          <div className="w-[177px] shrink-0 flex flex-col items-start justify-start gap-[3px]">
-            <div className="text-[16px] font-['Pretendard'] font-bold text-[#000] whitespace-nowrap">F&B PLACE</div>
-            <div className="text-[28px] font-['Pretendard'] font-bold text-[#000] whitespace-nowrap">가을엔 뇨끼를</div>
-            <div className="text-[15px] font-['Inter'] text-[#000] whitespace-nowrap">공릉 메모아</div>
-          </div>
-        </div>
-        <div className="w-[539px] flex flex-row items-start justify-end gap-[11px]">
-          <div className="flex flex-col items-end justify-start gap-[3px]">
-            <div className="text-[16px] font-['Pretendard'] font-bold text-[#000] whitespace-nowrap">PEOPLE</div>
-            <div className="text-[28px] font-['Pretendard'] font-bold text-[#000] text-right whitespace-nowrap">..느좋하이레제목<br/>대학가 1등 돈가스</div>
-            <div className="text-[15px] font-['Inter'] text-[#000] whitespace-nowrap">월계 하이레</div>
-          </div>
-          <img width="300" height="400" src="Mask group64_68.png"></img>
-        </div>
+      <div className="w-screen flex flex-row items-start justify-between">
+  <div className="relative w-[50vw] h-auto shrink-0 flex pl-[30px] pr-[2vw] py-[0px] bg-white flex-col justify-between items-start ">
+    <div className="h-[90px] flex flex-col justify-start items-start gap-0.5">
+      <div className="self-stretch flex justify-start items-center gap-[10px]">
+        <div className="text-black text-[45px] font-bold font-['Pretendard']">이 달의 MAGAZINE</div>
       </div>
-      <div className="relative w-[840px] h-[980px] shrink-0 flex flex-col items-start justify-between py-[30px] px-[31px]">
-        <div className="absolute left-0 top-0 w-[840px] h-[980px] shrink-0 flex">
-          <img className="absolute left-0 top-0" width="840" height="980" src="image 964_53.png"></img>
-          <div className="absolute left-0 top-0 w-[840px] h-[980px] bg-[linear-gradient(180deg,#00000000_0%,#00000044_60%,#000_100%)]"></div>
-        </div>
-        <div className="flex flex-row items-center justify-start gap-[17px]">
-          <div className="text-[40px] font-['Pretendard'] font-bold text-[#fff] whitespace-nowrap">CURTURE IN NOWON</div>
-          <img width="31" height="28" src="Vector64_48.png"></img>
-        </div>
-        <div className="w-[655px] flex flex-col items-start justify-start gap-[5px]">
-          <div className="self-stretch h-[120px] text-[50px] font-['Pretendard'] font-extrabold text-[#fff] flex flex-col justify-end">독립 출판인의 명절,<br/>언리미티드에디션 2024 방문기</div>
-          <div className="self-stretch h-[32px] text-[20px] font-['Inter'] text-[#fff]">서울시립 북서울미술관</div>
-        </div>
+      <div className="relative self-stretch h-8 text-black text-xl font-normal font-['Inter']"></div>
+    </div>
+
+    <div className="relative self-stretch flex flex-wrap justify-start items-start gap-5">
+      <div className="w-[18vw] h-[430px] relative">
+        <div className="w-full h-full left-0 top-0 absolute "></div>
+        <img className="w-full h-auto absolute top-0 left-0 object-cover" src={process.env.PUBLIC_URL + "/main_post3.png"} alt="post 3" />
+      </div>
+      <div className="w-[176.83px] flex flex-col justify-start items-start gap-[3px]">
+        <div className="text-black text-base font-bold font-['Pretendard']">PEOPLE & PLACE</div>
+        <div className="text-black text-[28px] font-bold font-['Pretendard']">하이레제목</div>
+        <div className="text-black text-[15px] font-normal font-['Inter']">공릉 메모아</div>
       </div>
     </div>
+
+    <div className="relative w-full flex justify-end items-start gap-5">
+      <div className="relative flex flex-col justify-start items-end gap-[3px]">
+        <div className="text-black text-base font-bold font-['Pretendard']">F&B PLACE</div>
+        <div className="text-right text-black text-[28px] font-bold font-['Pretendard']">가을엔 뇨끼를</div>
+        <div className="text-black text-[15px] font-normal font-['Inter']">공릉 메모아</div>
+      </div>
+      <div className="w-[18vw] h-[346.67px] relative">
+        <img className="w-full h-auto absolute top-0 left-0 object-cover" src={process.env.PUBLIC_URL + "/main_post4.png"} alt="post 4" />
+      </div>
+    </div>
+  </div>
+
+  <div className="relative w-[50%] h-auto shrink-0 flex flex-col items-end justify-between">
+    <div className="relative w-full h-auto flex">
+      <img className="w-full h-auto object-cover" src={process.env.PUBLIC_URL + "/main_post2.png"} alt="main post" />
+      <div className="absolute top-0 left-0 w-full h-full"></div>
+    </div>
+  </div>
+</div>
+
+
+
     <div className="w-[1379px] flex flex-col items-start justify-start gap-[27px]">
       <div className="w-[379px] flex flex-col items-start justify-start gap-[10px]">
         <div className="self-stretch flex flex-row items-center justify-start gap-[17px]">
           <div className="text-[40px] font-['Pretendard'] font-bold text-[#000] whitespace-nowrap">EDITOR’S TASTE</div>
-          <img width="31" height="28" src="Vector68_143.png"></img>
+          <img width="31" height="28" src={process.env.PUBLIC_URL + "/right.png"}></img>
         </div>
         <div className="self-stretch h-[32px] text-[20px] font-['Inter'] text-[#000]">에디터가 제안하는 공간들</div>
       </div>
       <div className="self-stretch flex flex-row items-center justify-start gap-[20px]">
         <div className="w-[446px] shrink-0 flex flex-col items-start justify-start gap-[11px]">
-          <img width="446" height="446" src="Mask group68_113.png"></img>
+          <img width="446" height="446" src={process.env.PUBLIC_URL + "/main_post5.png"}></img>
           <div className="flex flex-col items-start justify-start gap-[3px]">
             <div className="text-[16px] font-['Pretendard'] font-bold text-[#000] whitespace-nowrap">F&B PLACE</div>
             <div className="text-[28px] font-['Pretendard'] font-bold text-[#000] whitespace-nowrap">RM은 어떤 카페를 갈까</div>
@@ -144,7 +138,7 @@ const Main = () => {
           </div>
         </div>
         <div className="w-[446px] shrink-0 flex flex-col items-start justify-start gap-[11px]">
-          <img width="446" height="446" src="Mask group68_121.png"></img>
+          <img width="446" height="446" src={process.env.PUBLIC_URL + "/main_post6.png"}></img>
           <div className="flex flex-col items-start justify-start gap-[3px]">
             <div className="text-[16px] font-['Pretendard'] font-bold text-[#000] whitespace-nowrap">F&B PLACE</div>
             <div className="text-[28px] font-['Pretendard'] font-bold text-[#000] whitespace-nowrap">RM은 어떤 카페를 갈까</div>
@@ -152,7 +146,7 @@ const Main = () => {
           </div>
         </div>
         <div className="w-[446px] shrink-0 flex flex-col items-start justify-start gap-[11px]">
-          <img width="446" height="446" src="Mask group68_129.png"></img>
+          <img width="446" height="446" src={process.env.PUBLIC_URL + "/main_post7.png"}></img>
           <div className="flex flex-col items-start justify-start gap-[3px]">
             <div className="text-[16px] font-['Pretendard'] font-bold text-[#000] whitespace-nowrap">F&B PLACE</div>
             <div className="text-[28px] font-['Pretendard'] font-bold text-[#000] whitespace-nowrap">RM은 어떤 카페를 갈까</div>
