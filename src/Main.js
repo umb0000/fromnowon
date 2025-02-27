@@ -13,7 +13,10 @@ const Main = () => {
   }, []);
 
 	return (
-  <div className="w-screen h-[3700px] bg-[#fff] overflow-hidden">
+
+  <div className="w-screen h-[3500px] bg-[#fff] overflow-hidden">
+      {/* 데스크탑 레이아웃 */}
+  <div className="hidden md:flex flex-col items-center">
   <div className="absolute top-[157px] w-screen flex flex-col items-center justify-start gap-[0px]">
     <div className="relative w-screen h-[769px] shrink-0 flex">
       <div className="absolute left-1/2 top-0 items-center w-[460px] h-[682px] flex">
@@ -121,9 +124,9 @@ const Main = () => {
         />
       </svg>
 
-      <div className="absolute left-[35.77%] right-[55.23%] top-[22.93%] bottom-[72.93%] text-[20px] font-['Pretendard'] font-semibold text-[#fff]">상계</div>
-      <div className="absolute left-[53.53%] right-[36.01%] top-[51.21%] bottom-[44.66%] text-[20px] font-['Pretendard'] font-semibold text-[#fff]">중계</div>
-      <div className="absolute left-[35.28%] right-[52.8%] top-[65.34%] bottom-[28.28%] text-[20px] font-['Pretendard'] font-semibold text-[#fff]">하계</div>
+      <div className="absolute left-[33%] right-[55.23%] top-[22.93%] bottom-[72.93%] text-[20px] font-['Pretendard'] font-semibold text-[#fff]">상계</div>
+      <div className="absolute left-[45%] right-[36.01%] top-[50%] bottom-[44.66%] text-[20px] font-['Pretendard'] font-semibold text-[#fff]">중계</div>
+      <div className="absolute left-[30%] right-[52.8%] top-[60%] bottom-[28.28%] text-[20px] font-['Pretendard'] font-semibold text-[#fff]">하계</div>
       <div className="absolute left-[16.2%] right-[55.22%] top-[78.69%] bottom-[9.79%] text-[20px] font-['Pretendard'] font-semibold text-[#fff]">월계</div>
       <div className="absolute left-[61.72%] right-[9.71%] top-[74.89%] bottom-[13.58%] text-[20px] font-['Pretendard'] font-semibold text-[#fff]">공릉</div>
     </div>
@@ -134,7 +137,7 @@ const Main = () => {
         </div>
       </div>
 
-      <div className="w-screen flex flex-row items-start ">
+      <div className="w-screen flex flex-row items-start pb-[30px]">
   <div className="relative w-[50vw] h-auto shrink-0 flex pl-[30px]  pt-[25px] bg-white flex-col justify-between items-start ">
     <div className="h-[70px] flex flex-col justify-start items-start gap-0.5">
       <div className="self-stretch flex justify-start items-center gap-[10px]">
@@ -157,7 +160,7 @@ const Main = () => {
     </div></a>
 
     <a href='/post4' className='left-150'>
-    <div className="w-[45vw] relative w-full flex justify-end items-start gap-5 pt-[40px]">
+    <div className="w-[45vw] relative w-full flex justify-end items-start gap-5 pt-[40px] pl-[350px]">
     
       <div className="relative flex flex-col justify-start items-end gap-[3px]">
       
@@ -226,6 +229,12 @@ const Main = () => {
         </div>
       </div>
     </div></div>
+  </div>
+  </div>
+  
+  <div className="flex flex-col items-center md:hidden">
+    <h1 className="text-2xl font-bold">모바일 레이아웃</h1>
+    <p>이 부분은 모바일에서만 보입니다.</p>
   </div>
   
 </div>)

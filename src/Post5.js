@@ -13,7 +13,7 @@ const Post5 = () => {
       <div className="self-stretch text-[40px] font-['Pretendard'] font-bold text-[#000]">독립 출판인의 명절, 언리미티드에디션 2024 방문기</div>
       <div className="self-stretch text-[20px] font-['Pretendard'] font-light text-[#000]">서울시립 북서울 미술관</div>
       <img width="716"  src={process.env.PUBLIC_URL + "/post5_2.jpg"}></img>
-      <div className="w-[699px] text-[20px] font-['Pretendard'] font-medium text-[#000]">지난 11.15.~11.17. 열린 언리미티드에디션
+      <div className="w-[699px] text-[20px] font-['Pretendard'] font-medium text-[#000]">지난 11.15.~11.17. 열린 언리미티드에디션.<br/>
 책이라는 물성을 빌려 이 세계에 태어난 다정하고 창의적인
 자유로움들이 북서울미술관을 채웠습니다.<br/></div>
 <div className="w-[716px] flex flex-row items-center justify-start gap-[10px]">

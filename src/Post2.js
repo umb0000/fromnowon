@@ -55,7 +55,7 @@ const Post2 = () => {
             <div className="self-stretch text-black text-xl font-medium font-['Pretendard']">
               이외에도 구운 야채의 채즘을 잘 가둬 신선함과 쫄깃한 식감이 돋보이는 ‘구운 야채 샐러드’, 리코타 치즈와 바질페스토의 풍미가 어우러지는 ‘바질페스토’도 꼭 한 번 경험해보길 추천하는 메뉴이다.
             </div>
-            <img width="1139" src={process.env.PUBLIC_URL + "/post2_8.png"} />
+            <img width="1139" src={process.env.PUBLIC_URL + "/post2_8.png"} />k
             <div className="self-stretch text-black text-xl font-medium font-['Pretendard']">
               페페그라노는 단순히 맛있는 한 끼를 넘어, 기존의 파스타집에서 잘 접해보지 못한 새로운 미식을 선사한다. 그리고 그 감각은 또 찾고싶은 맛으로 기억될 것이다. 공릉동 한가운데서 이탈리아로의 작은 여행을 떠나고 싶다면, 이곳이 바로 그 여정을 완성시킬 장소이다.
             </div>
