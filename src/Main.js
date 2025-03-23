@@ -1,5 +1,6 @@
 import { useState, useEffect, EventHandler, ReactNode } from 'react'
 import './output.css';
+import MainLayout from './MainLayout';
 
 const Main = () => {
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
@@ -55,6 +56,10 @@ const Main = () => {
         </div>
       </div>
     </div>
+
+<div w-screen>
+  <MainLayout/>
+</div>
 
     <div className="w-screen flex flex-row items-start justify-between">
       <a href='/post2'>
