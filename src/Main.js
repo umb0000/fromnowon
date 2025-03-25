@@ -15,7 +15,7 @@ const Main = () => {
 
 	return (
 
-    <div className="w-screen h-screen overflow-y-scroll scrollbar-hide">
+    <div className="w-screen h-screen overflow-y-scroll scrollbar-hide ">
   <div className="h-[3500px] bg-white">
       {/* 데스크탑 레이아웃 */}
   <div className="hidden md:flex flex-col items-center">
