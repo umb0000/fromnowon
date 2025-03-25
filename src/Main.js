@@ -237,7 +237,7 @@ const Main = () => {
   </div>
   </div>
   
-  <div className="flex flex-col items-center md:hidden">
+  <div className="flex flex-col items-center lg:hidden ">
     <h1 className="text-2xl font-bold">모바일 레이아웃</h1>
     <p>이 부분은 모바일에서만 보입니다.</p>
   </div>

@@ -84,6 +84,37 @@ const MainLayout = () => {
     };
   }, [isInViewport]);
 
+  useEffect(() => {
+    const rightEl = rightRef.current;
+  
+    const handleWheel = (e) => {
+      if (!isInViewport || !hasSnapped || !rightEl) return;
+  
+      const atTop = rightEl.scrollTop === 0;
+      const atBottom =
+        rightEl.scrollTop + rightEl.clientHeight >= rightEl.scrollHeight - 1;
+  
+      if (atTop && e.deltaY < 0) {
+        // 위에 있고 위로 스크롤하는 경우 → 전체 페이지 스크롤 허용
+        return;
+      }
+  
+      if (atBottom && e.deltaY > 0) {
+        // 아래에 있고 아래로 스크롤하는 경우 → 전체 페이지 스크롤 허용
+        return;
+      }
+  
+      // 이외엔 오른쪽만 스크롤되게 막음
+      e.preventDefault();
+      rightEl.scrollTop += e.deltaY;
+    };
+  
+    window.addEventListener("wheel", handleWheel, { passive: false });
+    return () => {
+      window.removeEventListener("wheel", handleWheel);
+    };
+  }, [isInViewport, hasSnapped]);
+
   return (
     <div
       ref={layoutRef}
@@ -97,8 +128,8 @@ const MainLayout = () => {
           alt="main post"
         />
 
-<div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-20">
-    <h2 className="text-white text-2xl font-bold text-center">
+<div className="absolute bottom-[20px] left-[180px] -translate-x-1/2 -translate-y-1/2 z-20">
+    <h2 className="text-white text-4xl font-bold">
       여기에 원하는 텍스트
     </h2>
   </div>
@@ -108,12 +139,45 @@ const MainLayout = () => {
       {/* 오른쪽 영역 */}
       <div
         ref={rightRef}
-        className="w-1/2 bg-gray-200 p-6 overflow-y-auto h-full"
+        className="w-1/2 bg-white p-6 pt-0 overflow-y-auto h-full"
       >
-        <div className="h-[200vh] bg-gradient-to-b from-white to-gray-300">
-          <h2 className="text-xl font-bold mb-4">👉 오른쪽 스크롤</h2>
-          <p>중간에 있는 동안에는 전체 스크롤이 막혀요.</p>
-          <p className="mt-[160vh] text-right text-sm">⬇️ 맨 아래 도달</p>
+        <div className="flex flex-row h-[200vh] bg-gradient-to-b from-white to-gray-300">
+            
+            {/*오른쪽 첫 번째 열*/}
+
+            <div className="w-1/2 flex-col">
+        <a href='/post3'>
+    <div className="relative self-stretch flex flex-col justify-start items-start gap-2 p-1">
+      <div className="w-full relative">
+        <img className="w-full top-0 object-cover" src={process.env.PUBLIC_URL + "/main_post3.png"} alt="post 3" />
+      </div>
+      <div className="w-[auto] flex flex-col justify-start items-start gap-[3px]">
+        <div className="text-black text-base font-bold font-['Pretendard']">PEOPLE & PLACE</div>
+        <div className="text-black text-[28px] font-bold font-['Pretendard']">"로고, 딸이 그렸다, <br/>돈카츠 이유도 딸이 좋아해서..."</div>
+        <div className="text-black text-[15px] font-normal font-['Inter']">광운대 선정 1위 맛집 ㅡ 하이레 인터뷰</div>
+      </div>
+    </div>
+    
+    </a></div>
+
+    <div className="w-1/2 flex-col">
+        <a href='/post3'>
+    <div className="relative self-stretch flex flex-col justify-start items-start gap-5 p-6">
+      <div className="w-auto h-[430px] relative">
+        <img className="w-full h-auto top-0 left-0 object-cover" src={process.env.PUBLIC_URL + "/main_post3.png"} alt="post 3" />
+      </div>
+      <div className="w-[auto] flex flex-col justify-start items-start gap-[3px]">
+        <div className="text-black text-base font-bold font-['Pretendard']">PEOPLE & PLACE</div>
+        <div className="text-black text-[28px] font-bold font-['Pretendard']">"로고, 딸이 그렸다, <br/>돈카츠 이유도 딸이 좋아해서..."</div>
+        <div className="text-black text-[15px] font-normal font-['Inter']">광운대 선정 1위 맛집 ㅡ 하이레 인터뷰</div>
+      </div>
+    </div>
+    
+    </a></div>
+          
+
+
+  
         </div>
       </div>
     </div>

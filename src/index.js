@@ -13,6 +13,7 @@ import Post3 from './Post3.js';
 import Post4 from './Post4.js';
 import Post5 from './Post5.js';
 import Fb from './Fb.js';
+import TheEditStyleLayout from './test.js';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -32,6 +33,7 @@ root.render(
                 <Route path="/post4" element={<Post4 />} />
                 <Route path="/post5" element={<Post5 />} />
                 <Route path="/fb" element={<Fb />} />
+                <Route path="/test" element={<TheEditStyleLayout />} />
                 
               </Routes>
               <Topbar />
