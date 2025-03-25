@@ -4,7 +4,7 @@ import './output.css';
 const Topbar = () => {
   return (
     <div>
-    <div className="fixed top-0 w-full flex flex-col items-center justify-start backdrop-blur-md z-50">
+    <div className="fixed top-0 w-full flex flex-col items-center justify-start backdrop-blur-md z-50 overflow-y-scroll scrollbar-hide">
       <div className="w-full h-[38px] flex items-center justify-center bg-white">
         <div className="flex-1 text-lg font-['Pretendard'] font-medium text-black text-center">
           우리의 노원은 지금으로부터. FROM NOWON, FROM NOW ON

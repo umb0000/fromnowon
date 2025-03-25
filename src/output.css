@@ -649,4 +649,27 @@ video {
 }
 
 
+html, body {
+  /*overflow: auto; /* 스크롤 허용 */
+  overflow-x: hidden;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+
+  /* Firefox */
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+/* 크롬/사파리용 스크롤바 제거 */
+body::-webkit-scrollbar {
+ /* display: none;*/
+}
+
+/* 파이어폭스용 */
+body {
+ /* -ms-overflow-style: none;
+  scrollbar-width: none;*/
+}
+
 
