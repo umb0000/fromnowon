@@ -3,60 +3,48 @@ import './output.css';
 import MainLayout from './MainLayout';
 
 const Main = () => {
-  const [currentTextIndex, setCurrentTextIndex] = useState(0);
-  const words = ['노원으로부터', '공릉으로부터', '경춘선숲길로부터', '월계로부터','프나온으로부터']; // 교체할 단어 리스트
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTextIndex((prevIndex) => (prevIndex + 1) % words.length);
-    }, 1800); // 2초 애니메이션 + 2초 대기
-    return () => clearInterval(interval);
-  }, []);
+  
 
 	return (
 
     <div className="w-screen h-full ">
   <div className="h-[3500px] bg-white">
       {/* 데스크탑 레이아웃 */}
+      
       <div className="w-screen h-[1000px]">
   <img
     src={process.env.PUBLIC_URL + "/main_bg.png"}
     alt="배경 이미지"
-    className="w-full h-full object-cover rounded-xl shadow-md blur object-bottom"
+    className="w-full h-full object-cover rounded-xl shadow-md blur object-bottom "
   />
 
-<img
+<div className="absolute top-[88px] w-full h-auto group">
+  <img
     src={process.env.PUBLIC_URL + "/new_logo.png"}
-    alt="겹치는 이미지"
-    className="absolute top-[88px] w-full"
+    alt="logo"
+    className="transition duration-300 group-hover:scale-105 group-hover:mix-blend-exclusion"
   />
+
+  {/* mix-blend-exclusion 예제 */}
+  <div className="absolute inset-0 group-hover:mix-blend-exclusion transition duration-300" />
+
+  <div className="text-xl font-['Pretendard'] text-center font-bold text-white whitespace-nowrap tracking-tighter mix-blend-exclusion">
+    노원구 중심 감도 높은 노원구 공간 큐레이션 매거진, 프롬나우온
+  </div>
 </div>
+
+
+</div>
+
 
   <div className="hidden md:flex flex-col items-center ">
   <div className="absolute top-[157px] w-screen flex flex-col items-center justify-start gap-[0px] ">
     <div className="relative w-screen h-[769px] shrink-0 flex ">
       
-      <div className="absolute left-1/2 top-0 items-center w-[460px] h-[682px] flex"
-      style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/main_bg.png'})` }}>
-        
-        <img className="relative -translate-x-1/2 top-[40px]" width="600"  src={process.env.PUBLIC_URL + "/bg_map.png"}></img>
 
-      </div>
-      <div className="absolute -translate-x-1/2 left-1/2 top-[40px] flex flex-col items-center justify-center">
-        <div className="w-[1114px] h-[180px] text-[150px] font-['Pretendard'] font-bold text-[#000] text-center">FROM NOW ON</div>
-        <div className="w-[1114px] h-[180px] text-[150px] font-['Pretendard'] font-bold text-[#000] text-center">지금,</div>
-        <div className="w-[1114px] h-[180px] text-[150px] font-['Pretendard'] font-bold text-[#000] text-center overflow-hidden relative">
-              <span className="relative h-full flex flex-col items-center">
-                {words.map((word, index) => (
-                  <span 
-                    key={index} 
-                    className={`absolute transition-transform duration-1000 ease-in-out ${index === currentTextIndex ? 'translate-y-0' : 'translate-y-[100%]'}`}
-                  >
-                    {word}
-                  </span>
-                ))}
-              </span> </div>
-        <div className="text-[36px] font-['Pretendard'] text-[#000] whitespace-nowrap">노원구 중심 감도 높은 노원구 공간 큐레이션 매거진, 프롬나우온</div>
+      <div className="absolute -translate-x-1/2 left-1/2 bottom-[40px] flex flex-col items-center justify-center">
+        
+        
         <div className="flex flex-row items-start justify-start gap-[36px] py-[30px] px-0">
           <div className="w-[250px] h-[70px] shrink-0 flex flex-row items-center justify-between py-[10px] px-[20px] bg-[#fff] border-[1px] border-solid border-[#B2B2B2]">
             <div className="text-[25px] font-['Pretendard'] text-[#B2B2B2] text-center whitespace-nowrap">구독하기 (준비중)</div>
@@ -74,7 +62,7 @@ const Main = () => {
       </div>
     </div>
 
-    <div className="w-screen">
+    <div className="w-screen p-3">
   <MainLayout/>
 </div>
 
