@@ -139,13 +139,28 @@ const MainLayout = () => {
       {/* 오른쪽 영역 */}
       <div
         ref={rightRef}
-        className="w-1/2 bg-white p-6 pt-0 overflow-y-auto h-full"
-      >
-        <div className="flex flex-row h-[200vh] bg-gradient-to-b from-white to-gray-300">
+        className="w-1/2 bg-white p-2 pt-0 overflow-y-auto h-full">
+        <div className="flex flex-row h-[200vh] bg-gradient-to-b from-white to-gray-300 ">
             
             {/*오른쪽 첫 번째 열*/}
 
             <div className="w-1/2 flex-col">
+        <a href='/post3'>
+    <div className="relative self-stretch flex flex-col justify-start items-start gap-2">
+      <div className="w-full relative">
+        <img className="w-full top-0 object-cover" src={process.env.PUBLIC_URL + "/post5_2.jpg"} alt="post 3" />
+      </div>
+      <div className="w-[auto] flex flex-col justify-start items-start gap-[3px]">
+        <div className="text-black text-base font-bold font-['Pretendard']">PEOPLE & PLACE</div>
+        <div className="text-black text-[28px] font-bold font-['Pretendard']">독립 출판인의 계절, <br/> 언리미티드에디션 방문기</div>
+        <div className="text-black text-[15px] font-normal font-['Inter']">북서울시립미술관</div>
+      </div>
+    </div>
+    </a></div>
+
+    {/*오른쪽 두 번째 열*/}
+
+    <div className="w-1/2 flex-col pt-[200px]">
         <a href='/post3'>
     <div className="relative self-stretch flex flex-col justify-start items-start gap-2 p-1">
       <div className="w-full relative">
@@ -157,22 +172,6 @@ const MainLayout = () => {
         <div className="text-black text-[15px] font-normal font-['Inter']">광운대 선정 1위 맛집 ㅡ 하이레 인터뷰</div>
       </div>
     </div>
-    
-    </a></div>
-
-    <div className="w-1/2 flex-col">
-        <a href='/post3'>
-    <div className="relative self-stretch flex flex-col justify-start items-start gap-5 p-6">
-      <div className="w-auto h-[430px] relative">
-        <img className="w-full h-auto top-0 left-0 object-cover" src={process.env.PUBLIC_URL + "/main_post3.png"} alt="post 3" />
-      </div>
-      <div className="w-[auto] flex flex-col justify-start items-start gap-[3px]">
-        <div className="text-black text-base font-bold font-['Pretendard']">PEOPLE & PLACE</div>
-        <div className="text-black text-[28px] font-bold font-['Pretendard']">"로고, 딸이 그렸다, <br/>돈카츠 이유도 딸이 좋아해서..."</div>
-        <div className="text-black text-[15px] font-normal font-['Inter']">광운대 선정 1위 맛집 ㅡ 하이레 인터뷰</div>
-      </div>
-    </div>
-    
     </a></div>
           
 
