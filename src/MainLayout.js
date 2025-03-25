@@ -129,10 +129,10 @@ const MainLayout = () => {
           alt="main post"
         />
 
-<div className="absolute bottom-[20px] left-[180px] -translate-x-1/2 -translate-y-1/2 z-20">
-    <h2 className="text-white text-4xl font-bold">
-      여기에 원하는 텍스트
+<div className="absolute left-[5%] bottom-[5%] -translate-y-1/2 z-10">
+    <h2 className="text-white text-5xl font-bold text-left">이탈리아 현지 생면의 맛을 찾아서
     </h2>
+    <p className="text-white text-xl font-normal text-left pt-2">공릉 페페그라노</p>
   </div>
         
       </div>
@@ -140,8 +140,8 @@ const MainLayout = () => {
       {/* 오른쪽 영역 */}
       <div
         ref={rightRef}
-        className="w-1/2 bg-white p-2 pt-0 overflow-y-auto h-full overflow-x-scroll scrollbar-hide">
-        <div className="flex flex-row h-[200vh] bg-gradient-to-b from-white to-gray-300 ">
+        className="w-1/2 bg-yellow p-3 pt-0 pb-0 overflow-y-auto h-full overflow-x-scroll scrollbar-hide">
+        <div className="flex flex-row h-[200vh] gap-2 ">
             
             {/*오른쪽 첫 번째 열*/}
 

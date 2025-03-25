@@ -15,13 +15,29 @@ const Main = () => {
 
 	return (
 
-    <div className="w-screen h-screen overflow-y-scroll scrollbar-hide ">
+    <div className="w-screen h-full ">
   <div className="h-[3500px] bg-white">
       {/* 데스크탑 레이아웃 */}
-  <div className="hidden md:flex flex-col items-center">
+      <div className="w-screen h-[1000px]">
+  <img
+    src={process.env.PUBLIC_URL + "/main_bg.png"}
+    alt="배경 이미지"
+    className="w-full h-full object-cover rounded-xl shadow-md blur object-bottom"
+  />
+
+<img
+    src={process.env.PUBLIC_URL + "/new_logo.png"}
+    alt="겹치는 이미지"
+    className="absolute top-[88px] w-full"
+  />
+</div>
+
+  <div className="hidden md:flex flex-col items-center ">
   <div className="absolute top-[157px] w-screen flex flex-col items-center justify-start gap-[0px] ">
-    <div className="relative w-screen h-[769px] shrink-0 flex">
-      <div className="absolute left-1/2 top-0 items-center w-[460px] h-[682px] flex">
+    <div className="relative w-screen h-[769px] shrink-0 flex ">
+      
+      <div className="absolute left-1/2 top-0 items-center w-[460px] h-[682px] flex"
+      style={{ backgroundImage: `url(${process.env.PUBLIC_URL + '/main_bg.png'})` }}>
         
         <img className="relative -translate-x-1/2 top-[40px]" width="600"  src={process.env.PUBLIC_URL + "/bg_map.png"}></img>
 
@@ -62,7 +78,7 @@ const Main = () => {
   <MainLayout/>
 </div>
 
-   {/* <div className="w-screen flex flex-row items-start justify-between">
+    <div className="w-screen flex flex-row items-start justify-between">
       <a href='/post2'>
         <div className="relative w-[50vw] h-auto shrink-0 flex pl-[0px] pr-[2vw] py-[0px] bg-white flex-col justify-between items-start">
           <div className="relative w-full h-auto flex">
@@ -234,7 +250,7 @@ const Main = () => {
           </div>
         </div>
       </div>
-    </div></div>*/}
+    </div></div>
   </div>
   </div>
   </div>
