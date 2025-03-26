@@ -1,6 +1,8 @@
 import { useState, useEffect, EventHandler, ReactNode } from 'react'
 import './output.css';
 import MainLayout from './MainLayout';
+import MainLayoutB from './MainLayoutB';
+import { motion } from 'framer-motion';
 
 const Main = () => {
   
@@ -8,7 +10,7 @@ const Main = () => {
 	return (
 
     <div className="w-screen h-full ">
-  <div className="h-[3500px] bg-white">
+  <div className="h-full bg-white">
       {/* 데스크탑 레이아웃 */}
       
       <div className="w-screen h-[1000px]">
@@ -18,20 +20,26 @@ const Main = () => {
     className="w-full h-full object-cover rounded-xl shadow-md blur object-bottom "
   />
 
-<div className="absolute top-[88px] w-full h-auto group">
-  <img
-    src={process.env.PUBLIC_URL + "/new_logo.png"}
-    alt="logo"
-    className="transition duration-300 group-hover:scale-105 group-hover:mix-blend-exclusion"
-  />
+<motion.div
+            initial={{ opacity: 1, y: 0, scale: 0.5 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{ duration: 5, ease: 'easeOut' }}
+            viewport={{ once: false, amount: 0.2 }}
+            className="absolute top-[88px] w-full h-auto group"
+          >
+            <img
+              src={process.env.PUBLIC_URL + "/new_logo.png"}
+              alt="logo"
+              className="transition duration-300  "
+            />
 
-  {/* mix-blend-exclusion 예제 */}
-  <div className="absolute inset-0 group-hover:mix-blend-exclusion transition duration-300" />
+            {/* mix-blend-exclusion 예제 */}
+            <div className="absolute inset-0" />
 
-  <div className="text-xl font-['Pretendard'] text-center font-bold text-white whitespace-nowrap tracking-tighter mix-blend-exclusion">
-    노원구 중심 감도 높은 노원구 공간 큐레이션 매거진, 프롬나우온
-  </div>
-</div>
+            <div className="text-xl font-['Pretendard'] text-center font-bold text-white whitespace-nowrap tracking-tighter mix-blend-exclusion">
+              노원구 중심 감도 높은 노원구 공간 큐레이션 매거진, 프롬나우온
+            </div>
+          </motion.div>
 
 
 </div>
@@ -62,8 +70,11 @@ const Main = () => {
       </div>
     </div>
 
-    <div className="w-screen p-3">
+    <div className="w-screen ">
   <MainLayout/>
+</div>
+<div className="w-screen ">
+  <MainLayoutB/>
 </div>
 
     <div className="w-screen flex flex-row items-start justify-between">

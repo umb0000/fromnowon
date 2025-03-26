@@ -1,9 +1,10 @@
 import React, { useRef, useEffect, useState } from "react";
 import './output.css';
 
-const MainLayout = () => {
+const MainLayoutB = () => {
   const layoutRef = useRef(null);
   const rightRef = useRef(null);
+  const leftRef = useRef(null);
   const [isInViewport, setIsInViewport] = useState(false);
   const [hasSnapped, setHasSnapped] = useState(false); // 스냅 제어용
 
@@ -89,26 +90,20 @@ const MainLayout = () => {
     const rightEl = rightRef.current;
   
     const handleWheel = (e) => {
-      if (!isInViewport || !hasSnapped || !rightEl) return;
-  
-      const atTop = rightEl.scrollTop === 0;
-      const atBottom =
-        rightEl.scrollTop + rightEl.clientHeight >= rightEl.scrollHeight - 1;
-  
-      if (atTop && e.deltaY < 0) {
-        // 위에 있고 위로 스크롤하는 경우 → 전체 페이지 스크롤 허용
-        return;
-      }
-  
-      if (atBottom && e.deltaY > 0) {
-        // 아래에 있고 아래로 스크롤하는 경우 → 전체 페이지 스크롤 허용
-        return;
-      }
-  
-      // 이외엔 오른쪽만 스크롤되게 막음
-      e.preventDefault();
-      rightEl.scrollTop += e.deltaY;
-    };
+        if (!isInViewport || !hasSnapped || !leftRef.current) return;
+      
+        const leftEl = leftRef.current;
+      
+        const atTop = leftEl.scrollTop === 0;
+        const atBottom =
+          leftEl.scrollTop + leftEl.clientHeight >= leftEl.scrollHeight - 1;
+      
+        if (atTop && e.deltaY < 0) return;
+        if (atBottom && e.deltaY > 0) return;
+      
+        e.preventDefault();
+        leftEl.scrollTop += e.deltaY;
+      };
   
     window.addEventListener("wheel", handleWheel, { passive: false });
     return () => {
@@ -122,7 +117,7 @@ const MainLayout = () => {
       className="w-screen h-[calc(100vh-138px)] flex flex-row scroll-mt-[88px]"
     >
       {/* 왼쪽 영역 */}
-      <div className="w-1/2 relative bg-gray-100 overflow-hidden">
+      <div className="order-2 w-1/2 relative bg-gray-100 overflow-hidden">
         <img
           className="w-full h-full object-cover brightness-75"
           src={process.env.PUBLIC_URL + "/post2_2.png"}
@@ -139,9 +134,9 @@ const MainLayout = () => {
 
       {/* 오른쪽 영역 */}
       <div
-        ref={rightRef}
-        className="w-1/2 bg-[FFB433] p-3 pt-0 pb-0 overflow-y-auto h-full overflow-x-scroll scrollbar-hide"
-        style={{ backgroundColor: '#FFB433' }}>
+        ref={leftRef}
+        className="order-1 w-1/2 bg-[FFB433] p-3 pt-0 pb-0 overflow-y-auto h-full overflow-x-scroll scrollbar-hide"
+        style={{ backgroundColor: '#B4EBE6' }}>
         <div className="flex flex-row h-[200vh] gap-2 ">
             
             {/*오른쪽 첫 번째 열*/}
@@ -206,4 +201,4 @@ const MainLayout = () => {
   );
 };
 
-export default MainLayout;
+export default MainLayoutB;
