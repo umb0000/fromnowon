@@ -21,7 +21,7 @@ const Main = () => {
     className="w-full h-full object-cover blur object-bottom"
   />
 
-  <motion.div
+  <motion.div  aria-braillelabel=''
     initial={{ opacity: 1, y: 0, scale: 0.5 }}
     whileInView={{ opacity: 1, y: 0, scale: 1 }}
     transition={{ duration: 5, ease: 'easeOut' }}

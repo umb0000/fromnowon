@@ -668,16 +668,3 @@ html, body {
   /*scrollbar-width: none;
   -ms-overflow-style: none;*/
 }
-
-/* 크롬/사파리용 스크롤바 제거 */
-body::-webkit-scrollbar {
-  display: none;
-}
-
-/* 파이어폭스용 */
-body {
-  -ms-overflow-style: none;
-  scrollbar-width: none;
-}
-
-
