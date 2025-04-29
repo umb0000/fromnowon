@@ -553,22 +553,6 @@ video {
   display: none;
 }
 
-.scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
-}
-
-.scrollbar-hide::-webkit-scrollbar {
-  display: none;  /* Chrome, Safari, and Opera */
-}
-.no-scrollbar::-webkit-scrollbar {
-  display: none;
-}
-.no-scrollbar {
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none; /* Firefox */
-}
-
 .app-container {
   /*margin-top: 20px; /* 상태바 높이에 맞게 조정 */
  /* height: calc(100% - 20px); /* 전체 화면 높이에서 상태바 높이만큼 제외 */
@@ -646,10 +630,6 @@ video {
 
 .custom-gradient {
   background-image: linear-gradient(to bottom, #FFF8E7, #FFC972, #FFFFFF);
-}
-
-body::-webkit-scrollbar {
-  display: none;
 }
 
 body {

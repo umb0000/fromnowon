@@ -48,7 +48,7 @@ const Topbar = () => {
 
 <div className="w-screen h-[50px] fixed bottom-[0px] flex flex-row items-center justify-between py-[13px] px-[30px] bg-[#000] z-50">
 <a href="/"> <div className="text-[20px] font-['Pretendard'] font-black text-[#fff] text-center whitespace-nowrap">FROM NOW ON</div></a>
-<div className="pr-[1370px] text-[10px] font-['Pretendard'] font-medium text-[#fff] text-center whitespace-nowrap pr-[10px]">본 페이지는 PC버전으로 제작되었습니다.</div>
+<div className="pr-[1370px] text-[10px] font-['Pretendard'] font-medium text-[#fff] text-center whitespace-nowrap pr-[10px] pl-[10px]">본 페이지는 PC버전으로 제작되었습니다. <a classname="pl-[10px]" href="mailto:sandwich1038@gmail.com"> Design & Published by Soyeon Lee sandwich1038@gmail.com</a></div>
   <a href="https://www.instagram.com/fromnowon.mag"><div className="text-[20px] font-['Pretendard'] font-black text-[#fff] text-center whitespace-nowrap pr-[10px]">INSTAGRAM</div></a>
 </div>
 
